@@ -1,7 +1,10 @@
-//Mouse clicked, particle system (cough/sneeze), more virus 
+//Mouse clicked, more virus 
 //space bar clicked, sink appears, virus lessens
 
 PImage person;
+PImage PurpleVirus;
+
+ParticleSystem ps = new ParticleSystem();
 
 void setup()
 {
@@ -9,6 +12,8 @@ void setup()
 
   person = loadImage("boy.png");
   person.resize(125, 125);
+
+  ps.addParticle();
 }
 
 void draw()
@@ -17,4 +22,6 @@ void draw()
 
   imageMode(CENTER);
   image(person, mouseX, mouseY);
+
+  ps.run();
 }
