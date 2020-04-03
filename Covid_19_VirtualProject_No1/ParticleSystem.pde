@@ -22,10 +22,6 @@ class ParticleSystem
     if (mousePressed)
     {
       particles.add(new Particle());
-
-      //PurpleVirus = loadImage("virus.png");
-      //PurpleVirus.resize(60, 60);
-      //image(PurpleVirus, random(0,500), random(0,500));
     }
 
     for (int i = particles.size()-1; i>=0; i--)
