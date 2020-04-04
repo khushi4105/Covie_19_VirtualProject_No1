@@ -7,10 +7,10 @@ class Particle
 
   Particle()
   {
-    location  = new PVector(mouseX+15, mouseY-20);
-    acceleration = new PVector(0, 0.01);
+    location  = new PVector(mouseX+5, mouseY-20);
+    acceleration = new PVector(0,0.02);
     velocity = new PVector(random(-0.5,0.5), random(-0.5,0.5));
-    lifespan = 75;
+    lifespan = 100;
   }
 
   void update()
@@ -23,7 +23,7 @@ class Particle
   void display()
   {
     stroke(227, 197, 133, lifespan);
-    fill(120, 142,36,lifespan);
+    fill(117, 134, 23,lifespan);
     ellipse(location.x, location.y, 6,6);
   }
 

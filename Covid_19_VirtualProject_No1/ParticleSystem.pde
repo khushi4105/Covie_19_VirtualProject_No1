@@ -2,7 +2,7 @@ class ParticleSystem
 {
   ArrayList<Particle> particles; 
   PVector origin;
-  int total = 5;
+  int total = 15;
 
   ParticleSystem()
   {

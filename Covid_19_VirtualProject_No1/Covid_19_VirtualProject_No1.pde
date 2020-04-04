@@ -1,13 +1,8 @@
 /*
 
- DONE:
- - particle system class
- - mouse clicked, person puked
- 
- REMAINING:
- - mouse clicked, virus adds (virus class)
- - person near sink, virus lessons
- - edit ReadMe
+1. Press mouse continuosly, poisonous virus falls
+2. Click mouse at the same time, virus increases
+3. Go near sink (represents washing hands), virus decreases)
  
  */
 
@@ -33,9 +28,9 @@ void setup()
 
   ps.addParticle();
 
-  myFirstVirus = new Virus();
+  //myFirstVirus = new Virus();
 
-  viruses = new Virus[15];
+  viruses = new Virus[100];
 
   for (int i=0; i<15; i++)
   {
@@ -69,7 +64,7 @@ void mousePressed()
 {
   if (mousePressed)
   {
-    if (NoOfViruses < 15)
+    if (NoOfViruses < 100)
     {
       viruses[NoOfViruses] = new Virus();
       viruses[NoOfViruses].MakeVirusAlive();

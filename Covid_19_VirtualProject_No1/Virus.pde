@@ -9,8 +9,8 @@ class Virus
 
   Virus()
   {
-    x = random(0, 500);
-    y = random(0, 500);
+    x = mouseX+60;
+    y = mouseY+50;
     position = new PVector(x, y);
 
     PurpleVirus = loadImage("virus.png");
