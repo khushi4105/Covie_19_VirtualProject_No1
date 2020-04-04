@@ -17,7 +17,9 @@ PImage Wash;
 Virus myFirstVirus; 
 ParticleSystem ps = new ParticleSystem();
 
-//Virus viruses[];
+Virus viruses[];
+
+int NoOfViruses = 0;
 
 void setup()
 {
@@ -33,12 +35,12 @@ void setup()
 
   myFirstVirus = new Virus();
 
-  //viruses = new Virus[15];
+  viruses = new Virus[15];
 
-  //for(int i=0; i<15; i++)
-  //{
-  //  viruses[i] = new Virus();
-  //}
+  for (int i=0; i<15; i++)
+  {
+    viruses[i] = new Virus();
+  }
 }
 
 void draw()
@@ -52,17 +54,27 @@ void draw()
 
   ps.run();
 
-  //for(int i=0; i<15; i++)
-  //{
-  //  viruses[i] = new Virus();
-  //}
+  if (NoOfViruses > 0)
+  {
+    for (int i=0; i<NoOfViruses; i++)
+    {
+      viruses[i].Draw();
+    }
+  }
 
-  myFirstVirus.Draw();
+  //myFirstVirus.Draw();
 }
 
-//void mousePressed()
-//{
-//  if (mousePressed)
-//  {
-//viruses = new Virus();
-//  }
+void mousePressed()
+{
+  if (mousePressed)
+  {
+    if (NoOfViruses < 15)
+    {
+      viruses[NoOfViruses] = new Virus();
+      viruses[NoOfViruses].MakeVirusAlive();
+      NoOfViruses = NoOfViruses + 1;
+      println(NoOfViruses);
+    }
+  }
+}
