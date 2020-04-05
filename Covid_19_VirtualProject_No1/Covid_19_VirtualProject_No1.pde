@@ -9,6 +9,8 @@
 PImage Person;
 PImage Wash;
 
+PFont Serif;
+
 Virus myFirstVirus; 
 ParticleSystem ps = new ParticleSystem();
 
@@ -18,7 +20,7 @@ int NoOfViruses = 0;
 
 void setup()
 {
-  size(600,600);
+  size(600, 600);
 
   Person = loadImage("boy.png");
   Person.resize(125, 125);
@@ -36,6 +38,8 @@ void setup()
   {
     viruses[i] = new Virus();
   }
+
+  Serif = loadFont("codingg.vlw");
 }
 
 void draw()
@@ -56,7 +60,15 @@ void draw()
       viruses[i].Draw();
     }
   }
-  
+
+  fill(255, 255, 255);
+  textFont(Serif);
+  text("Hold mouse continously for infectious", 10, 20 ); 
+  text("droplets to fall. Press mouse at", 10, 40 ); 
+  text("the same time to show spread of virus", 10, 60); 
+  text("particles. If ill boy goes near", 10, 80 ); 
+  text("the sink, virus particles will stop adding.", 10, 100); 
+
   //myFirstVirus.Draw();
 }
 
