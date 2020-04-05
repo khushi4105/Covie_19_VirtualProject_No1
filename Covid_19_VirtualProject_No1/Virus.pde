@@ -25,9 +25,23 @@ class Virus
       image(PurpleVirus, x, y);
     }
   }
-  
+
   void MakeVirusAlive()
   {
     isAlive=true;
+    
+    if(mouseX < 620)
+    {
+     if(mouseX > 380)
+     {
+      if(mouseY > 180)
+      {
+       if(mouseY < 420)
+       {
+        isAlive=false; 
+       }
+      }
+     }
+    }
   }
 }

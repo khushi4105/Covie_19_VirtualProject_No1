@@ -1,8 +1,8 @@
 /*
 
-1. Press mouse continuosly, poisonous virus falls
-2. Click mouse at the same time, virus increases
-3. Go near sink (represents washing hands), virus decreases)
+ 1. Press mouse continuosly, poisonous virus falls
+ 2. Click mouse at the same time, virus increases
+ 3. Go near sink (represents washing hands), virus stops getting added)
  
  */
 
@@ -18,7 +18,7 @@ int NoOfViruses = 0;
 
 void setup()
 {
-  size(500, 500);
+  size(600,600);
 
   Person = loadImage("boy.png");
   Person.resize(125, 125);
@@ -32,7 +32,7 @@ void setup()
 
   viruses = new Virus[100];
 
-  for (int i=0; i<15; i++)
+  for (int i=0; i<100; i++)
   {
     viruses[i] = new Virus();
   }
@@ -45,7 +45,7 @@ void draw()
   imageMode(CENTER);
   image(Person, mouseX, mouseY);
 
-  image(Wash, 400, 290);
+  image(Wash, 450, 290);
 
   ps.run();
 
@@ -56,7 +56,7 @@ void draw()
       viruses[i].Draw();
     }
   }
-
+  
   //myFirstVirus.Draw();
 }
 
