@@ -39,7 +39,7 @@ void setup()
     viruses[i] = new Virus();
   }
 
-  Serif = loadFont("codingg.vlw");
+  Serif = loadFont("codinggggg.vlw");
 }
 
 void draw()
@@ -61,7 +61,7 @@ void draw()
     }
   }
 
-  fill(255, 255, 255);
+  fill(255, 244, 160);
   textFont(Serif);
   text("Hold mouse continously for infectious", 10, 20 ); 
   text("droplets to fall. Press mouse at", 10, 40 ); 
