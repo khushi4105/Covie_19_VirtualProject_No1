@@ -30,13 +30,13 @@ class Virus
   {
     isAlive=true;
     
-    if(mouseX < 620)
+    if(mouseX < 675)
     {
-     if(mouseX > 380)
+     if(mouseX > 150)
      {
-      if(mouseY > 180)
+      if(mouseY > 330)
       {
-       if(mouseY < 420)
+       if(mouseY < 620)
        {
         isAlive=false; 
        }

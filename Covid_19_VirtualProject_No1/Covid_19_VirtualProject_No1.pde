@@ -8,6 +8,7 @@
 
 PImage Person;
 PImage Wash;
+PImage Bath;
 
 PFont Serif;
 
@@ -26,7 +27,10 @@ void setup()
   Person.resize(125, 125);
 
   Wash = loadImage("sink.png");
-  Wash.resize(130, 130);
+  Wash.resize(150, 150);
+  
+  Bath = loadImage("shower.png");
+  Bath.resize(175, 200);
 
   ps.addParticle();
 
@@ -49,8 +53,9 @@ void draw()
   imageMode(CENTER);
   image(Person, mouseX, mouseY);
 
-  image(Wash, 450, 290);
-
+  image(Wash, 345, 455);
+  
+  image(Bath, 500, 450);
   ps.run();
 
   if (NoOfViruses > 0)
@@ -66,8 +71,8 @@ void draw()
   text("Hold mouse continously for infectious", 10, 20 ); 
   text("droplets to fall. Press mouse at", 10, 40 ); 
   text("the same time to show spread of virus", 10, 60); 
-  text("particles. If ill boy goes near", 10, 80 ); 
-  text("the sink, virus particles will stop adding.", 10, 100); 
+  text("particles. If ill boy goes near the sink", 10, 80 ); 
+  text("& shower, virus particles will stop adding.", 10, 100); 
 
   //myFirstVirus.Draw();
 }
